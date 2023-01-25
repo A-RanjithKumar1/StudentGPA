@@ -16,7 +16,7 @@ public class Student{
     }
     public String NameandGPA(){
         String res="";
-        res+=StudentName+" "+"has a "+GPA+ "GPA";
+        res+=StudentName+" "+"has a "+GPA+" GPA";
         return res;
     }
     public static void main(String[] args) {
