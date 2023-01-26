@@ -19,7 +19,6 @@ public class Student{
     }
     public String nameAndgPA(){
         String res="";
-        //res+=studentName+" "+"has a "+gPA+" GPA";
         res=String.format("%s has a %.1f GPA",studentName,gPA);
         return res;
     }
