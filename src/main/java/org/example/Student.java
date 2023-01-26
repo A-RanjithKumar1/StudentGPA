@@ -14,11 +14,13 @@ public class Student{
     }
     public void update(float gpa){
         gPA=gpa;
-        LOGGER.log(Level.INFO,"The updated Gpa is-----"+gPA);
+        LOGGER.log(Level.INFO,"The updated Gpa is");
+        LOGGER.log(Level.INFO,Double.toString(gPA),"The updated Gpa is");
     }
     public String nameAndgPA(){
         String res="";
-        res+=studentName+" "+"has a "+gPA+" GPA";
+        //res+=studentName+" "+"has a "+gPA+" GPA";
+        res=String.format("%s has a %.1f GPA",studentName,gPA);
         return res;
     }
     public static void main(String[] args) {
