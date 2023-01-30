@@ -27,17 +27,17 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        LOGGER.log(Level.INFO, "Please Enter the Student Name");
-        String name = sc.next();
-        LOGGER.log(Level.INFO, "Enter the Grade level");
-        char gr = sc.next().charAt(0);
-        LOGGER.log(Level.INFO, "Enter your GPA");
-        float gp = sc.nextFloat();
-        Student calculation = new Student(name, gr, gp);
-        boolean choose = true;
-        while (choose) {
-            try {
+        try {
+            Scanner sc = new Scanner(System.in);
+            LOGGER.log(Level.INFO, "Please Enter the Student Name");
+            String name = sc.next();
+            LOGGER.log(Level.INFO, "Enter the Grade level");
+            char gr = sc.next().charAt(0);
+            LOGGER.log(Level.INFO, "Enter your GPA");
+            float gp = sc.nextFloat();
+            Student calculation = new Student(name, gr, gp);
+            boolean choose = true;
+            while (choose) {
                 LOGGER.log(Level.INFO, "Do you need to update your GPA" + "\n" + "1.Yes" + "\n" + "2.No" + "\n" + "3.View Student Name and GPA" + "\n" + "4.Exit");
                 int ch = sc.nextInt();
                 if (ch == 1) {
@@ -51,10 +51,10 @@ public class Student {
                     LOGGER.log(Level.INFO, result);
                     choose = false;
                 }
-            } catch (Exception e) {
+            }
+        }
+        catch (Exception e) {
                 LOGGER.info("Something went wrong while giving input");
-                choose = false;
             }
         }
     }
-}
