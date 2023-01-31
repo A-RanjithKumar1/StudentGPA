@@ -27,7 +27,6 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        try {
             Scanner sc = new Scanner(System.in);
             LOGGER.log(Level.INFO, "Please Enter the Student Name");
             String name = sc.next();
@@ -51,10 +50,6 @@ public class Student {
                     LOGGER.log(Level.INFO, result);
                     choose = false;
                 }
-            }
-        }
-        catch (Exception e) {
-                LOGGER.info("Something went wrong while giving input");
             }
         }
     }
